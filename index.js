@@ -11,6 +11,8 @@ var y = '';
 var counter = 1;
 var playerCount = 1;
 
+//
+
 var playerTurn = function() {
     if(playerCount % 2 === 0) {
         return player2;
@@ -68,117 +70,32 @@ if (ready === 'yes') {
             );
         }
         printBorad();
+
+
+
+
+
+
+
+
+
+
+
+
         userInput = prompt();
         if (allowedMoves()) {
             board[x - 1][y - 1] = turnCounter();
             usedMoves.push();
             counter = counter += 1;
             playerCount = playerCount += 1;
+            // win();
             printBorad();
         } else {
-            console.log('Wrong number combination');
-        }
-        console.log(playerTurn() + ' ' + 'your turn');
-        userInput = prompt();
-        if (allowedMoves()) {
-            board[x - 1][y - 1] = turnCounter();
-            counter = counter += 1;
-            playerCount = playerCount += 1;
-            printBorad();
-        } else {
-            console.log('Wrong number combination');
-        }
-        console.log(playerTurn() + ' ' + 'your turn');
-        userInput = prompt();
-        if (allowedMoves()) {
-            board[x - 1][y - 1] = turnCounter();
-            counter = counter += 1;
-            playerCount = playerCount += 1;
-            printBorad();
-        }
-        else {
-            console.log('Wrong number combination');
-        }
-        console.log(playerTurn() + ' ' + 'your turn');
-        userInput = prompt();
-        if (allowedMoves()) {
-            board[x - 1][y - 1] = turnCounter();
-            counter = counter += 1;
-            playerCount = playerCount += 1;
-            printBorad();
-        }
-        else {
-            console.log('Wrong number combination');
-        }
-        console.log(playerTurn() + ' ' + 'your turn');
-        userInput = prompt();
-        if (allowedMoves()) {
-            board[x - 1][y - 1] = turnCounter();
-            counter = counter += 1;
-            playerCount = playerCount += 1;
-            printBorad();
-        }
-        else {
-            console.log('Wrong number combination');
-        }
-        console.log(playerTurn() + ' ' + 'your turn');
-        userInput = prompt();
-        if (allowedMoves()) {
-            board[x - 1][y - 1] = turnCounter();
-            counter = counter += 1;
-            playerCount = playerCount += 1;
-            printBorad();
-        }
-        else {
-            console.log('Wrong number combination');
-        }
-        console.log(playerTurn() + ' ' + 'your turn');
-        userInput = prompt();
-        if (allowedMoves()) {
-            board[x - 1][y - 1] = turnCounter();
-            counter = counter += 1;
-            playerCount = playerCount += 1;
-            printBorad();
-        }
-        else {
-            console.log('Wrong number combination');
-        }
-        console.log(playerTurn() + ' ' + 'your turn');
-        userInput = prompt();
-        if (allowedMoves()) {
-            board[x - 1][y - 1] = turnCounter();
-            counter = counter += 1;
-            playerCount = playerCount += 1;
-            printBorad();
-        }
-        else {
-            console.log('Wrong number combination');
-        }
-        console.log(playerTurn() + ' ' + 'your turn');
-        userInput = prompt();
-        if (allowedMoves()) {
-            board[x - 1][y - 1] = turnCounter();
-            counter = counter += 1;
-            playerCount = playerCount += 1;
-            printBorad();
-        }
-        else {
-            console.log('Wrong number combination');
+            while(userInput != allowedMoves) {
+                console.log('Try again')
+                prompt();
+                printBorad();
+            }
         }
     }
 }
-
-
-// var printBorad = function() {
-//  console.log (
-//      '       1     ' + ' 2      ' + '3        \n' +
-//      '   ~~~~~~~~~~~~~~~~~~~~~~ \n' +
-//      '1  ' + '|     ' + board[0][0] + '|     ' + board[0][1] + '|     ' + board[0][2] + '|\n' +
-//      '   ~~~~~~~~~~~~~~~~~~~~~~ \n' +
-//      '2  ' + '|     ' + board[1][0] + '|     ' + board[1][1] + '|     ' + board[1][2] + '|\n' +
-//      '   ~~~~~~~~~~~~~~~~~~~~~~ \n' +
-//      '3  ' + '|     ' + board[2][0] + '|     ' + board[2][1] + '|     ' + board[2][2] + '|\n' +
-//      '   ~~~~~~~~~~~~~~~~~~~~~~ \n'
-//      );
-// }
-// printBorad();
